@@ -25,12 +25,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Agregar evento para la búsqueda mientras se escribe
+  // Agregar evento para la búsqueda mientras se escribe y del filtro
   buscador.addEventListener('input', filtrarCatalogo);
-
-  // Agregar evento para el filtro de género
   filtroGenero.addEventListener('change', filtrarCatalogo);
-
-  // También ejecutar la función al iniciar para cargar el catálogo con los filtros
+  
   filtrarCatalogo();
 });
