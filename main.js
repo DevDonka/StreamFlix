@@ -7,13 +7,17 @@ document.addEventListener('DOMContentLoaded', () => {
   // Función para filtrar el catálogo
   function filtrarCatalogo() {
     const termino = buscador.value.toLowerCase();
+    const generoSeleccionado = filtroGenero.value;
 
     tarjetas.forEach(card => {
       const titulo = card.querySelector('.card-title').textContent.toLowerCase();
+      const generoTarjeta = card.parentElement.getAttribute('data-genero');
+
       const coincideBusqueda = titulo.includes(termino);
+      const coincideGenero = generoSeleccionado === 'todos' || generoTarjeta === generoSeleccionado;
 
       // Mostrar u ocultar la tarjeta de acuerdo con las condiciones
-      if (coincideBusqueda) {
+      if (coincideBusqueda && coincideGenero) {
         card.parentElement.style.display = 'block';
       } else {
         card.parentElement.style.display = 'none';
@@ -23,8 +27,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Agregar evento para la búsqueda mientras se escribe
   buscador.addEventListener('input', filtrarCatalogo);
-  // Agregar evento para el filtro de géner
+
+  // Agregar evento para el filtro de género
   filtroGenero.addEventListener('change', filtrarCatalogo);
+
   // También ejecutar la función al iniciar para cargar el catálogo con los filtros
   filtrarCatalogo();
 });
