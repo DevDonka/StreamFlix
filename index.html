@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StreamFlix</title>
+  <link rel="stylesheet" href="stream.css" />
+  <link rel="icon" href="/img/Stream.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div class="logo">StreamFlix</div>
+    <nav>
+      <a href="#">Inicio</a>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#contacto">Contacto</a>
+      <a href="#">Unirse</a>
+    </nav>
+    <div class="search-bar">
+      <input type="text" id="catalogoBuscador" placeholder="Buscar...">
+      <button type="submit">Buscar</button>
+    </div>
+  </header>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Bienvenidos a StreamFlix</h1>
+      <p>Disfruta de un catálogo único de cine, documentales y más.</p>
+      <a href="#catalogo" class="btn-outline">Explora Ahora</a>
+    </div>
+  </section>
+  <section id="about" class="about">
+    <h2>Acerca De StreamFlix</h2>
+    <p>StreamFlix es una plataforma de streaming que ofrece una experiencia audiovisual diferente. Nuestro objetivo es
+      proporcionar contenido artístico, selecto y a tu ritmo.</p>
+  </section>
+  <section id="catalogo" class="catalogo">
+    <h2>Catálogo</h2>
+    <div class="container mb-4">
+      <div class="row justify-content-center">
+        <div class="col-md-6 mb-2">
+          <select class="form-select" id="filtroGenero">
+            <option value="terror">Terror</option>
+            <option value="cienciaficcion">Ciencia Ficción</option>
+            <option value="drama">Drama</option>
+            <option value="documental">Documental</option>
+            <option value="experimental">Experimental</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4" id="peliculasCatalogo">
+        <div class="col" data-genero="terror">
+          <div class="card catalogo-item h-100">
+            <img src="/img/Anabelle.jpg" class="card-img-top" alt="Anabelle">
+            <div class="card-body text-center">
+              <h5 class="card-title">Annabelle</h5>
+              <p class="card-description">Un clásico de la ciencia ficción y el terror.</p>
+              <a href="enlace-de-descarga-de-alien.mp4" class="btn-descarga" download>Descargar</a>
+            </div>
+          </div>
+        </div>
+        <div class="col" data-genero="terror">
+          <div class="card catalogo-item h-100">
+            <img src="/img/Terrefier.jpg" class="card-img-top" alt="El Exorcista">
+            <div class="card-body text-center">
+              <h5 class="card-title">El Exorcista</h5>
+              <p class="card-description">Una obra maestra del terror psicológico.</p>
+              <a href="enlace-de-descarga-de-el-exorcista.mp4" class="btn-descarga" download>Descargar</a>
+            </div>
+          </div>
+        </div>
+        <div class="col" data-genero="terror">
+          <div class="card catalogo-item h-100">
+            <img src="/img/Poltergeist.jpg" class="card-img-top" alt="Poltergeist">
+            <div class="card-body text-center">
+              <h5 class="card-title">Poltergeist</h5>
+              <p class="card-description">Un escalofriante clásico que redefine el terror doméstico.</p>
+              <a href="" class="btn-descarga" download>Descargar</a>
+            </div>
+          </div>
+        </div>
+        <div class="col" data-genero="drama">
+          <div class="card catalogo-item h-100">
+            <img src="/img/ElizaGraves.jpg" class="card-img-top" alt="Eliza Graves">
+            <div class="card-body text-center">
+              <h5 class="card-title">Eliza Graves</h5>
+              <p class="card-description">Un intrigante laberinto de secretos y engaños dentro de un asilo mental.</p>
+              <a href="" class="btn-descarga" download>Descargar</a>
+            </div>
+          </div>
+        </div>
+        <div class="col" data-genero="cienciaficcion">
+          <div class="card catalogo-item h-100">
+            <img src="/img/Matrix.jpg" class="card-img-top" alt="Matrix">
+            <div class="card-body text-center">
+              <h5 class="card-title">Matrix</h5>
+              <p class="card-description">Un revolucionario viaje a la verdad detrás de la ilusión.</p>
+              <a href="" class="btn-descarga" download>Descargar</a>
+            </div>
+          </div>
+        </div>
+        <div class="col" data-genero="terror">
+          <div class="card catalogo-item h-100">
+            <img src="/img/scream.jpg" class="card-img-top" alt="Scream">
+            <div class="card-body text-center">
+              <h5 class="card-title">Scream</h5>
+              <p class="card-description">Un ingenioso y sangriento slasher que te hará cuestionar cada cliché del
+                terror.</p>
+              <a href="" class="btn-descarga" download>Descargar</a>
+            </div>
+          </div>
+        </div>
+        <div class="col" data-genero="cienciaficcion">
+          <div class="card catalogo-item h-100">
+            <img src="/img/Guardianesdelagalaxia.jpg" class="card-img-top" alt="guardianes">
+            <div class="card-body text-center">
+              <h5 class="card-title">Guardianes de la Galaxia</h5>
+              <p class="card-description">Una explosiva y cósmica aventura llena de humor y corazón.</p>
+              <a href="" class="btn-descarga" download>Descargar</a>
+            </div>
+          </div>
+        </div>
+        <div class="col" data-genero="cienciaficcion">
+          <div class="card catalogo-item h-100">
+            <img src="/img/Avatar.jpg" class="card-img-top" alt="Avatar">
+            <div class="card-body text-center">
+              <h5 class="card-title">Avatar</h5>
+              <p class="card-description">Una deslumbrante epopeya visual que te transporta a un mundo alienígena de
+                maravilla y conflicto.</p>
+              <a href="" class="btn-descarga" download>Descargar</a>
+            </div>
+          </div>
+        </div>
+        <div class="col" data-genero="drama">
+          <div class="card catalogo-item h-100">
+            <img src="/img/Cambiodereina.jpg" class="card-img-top" alt="Cambio de Reina">
+            <div class="card-body text-center">
+              <h5 class="card-title">Cambio de Reina</h5>
+              <p class="card-description">Un conmovedor relato sobre la identidad, el deber y el inesperado intercambio
+                de vidas reales.</p>
+              <a href="" class="btn-descarga" download>Descargar</a>
+            </div>
+          </div>
+        </div>
+  </section>
+  <section id="contacto" class="contacto">
+    <h2>Contacto</h2>
+    <p>¿Tienes alguna pregunta o sugerencia? ¡Contáctanos!</p>
+    <form>
+      <input type="text" placeholder="Nombre">
+      <input type="email" placeholder="Correo Electrónico">
+      <textarea placeholder="Mensaje"></textarea>
+      <button type="submit" class="btn-outline">Enviar Mensaje</button>
+    </form>
+  </section>
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>StreamFlix</h3>
+        <p>Donde el cine se siente.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Enlaces Útiles</h3>
+        <ul>
+          <li><a href="#">Términos de Uso</a></li>
+          <li><a href="#">Política de Privacidad</a></li>
+          <li><a href="#">Preguntas Frecuentes</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Síguenos</h3>
+        <div class="social-links">
+          <a href="#" target="_blank">Facebook</a>
+          <a href="#" target="_blank">Twitter</a>
+          <a href="#" target="_blank">Instagram</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 StreamFlix · Todos los derechos reservados.</p>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>
